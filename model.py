@@ -5,10 +5,10 @@ from tensorflow.keras.layers import Convolution2D, MaxPooling2D, BatchNormalizat
 import os, editdistance, time, datetime
 import numpy as np
 
-from CRNN.dataloader import read_from_json
+from dataloader import read_from_json
 
 class Constants:
-    rootPath = "/home/hans/WorkSpace/Data/_@Models/FL_CRNN/"
+    rootPath = "/home/hans/WorkSpace/Data/_@Models/CRNN/"
     mode = 0
 
     if mode ==0:
