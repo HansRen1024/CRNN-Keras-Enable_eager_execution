@@ -1,4 +1,4 @@
-import json, cv2, base64
+import json, cv2
 import numpy as np
 
 class sequence_order_num:
@@ -43,7 +43,7 @@ def read_from_json(images, batchsize):
             IdNumber = temp['label']
             img = temp['img'].encode('utf-8')
             inputL = temp['input_length']
-            BluredImg = cv2.imdecode(np.frombuffer(base64.b64decode(img), np.uint8), 1)
+            BluredImg = cv2.imdecode(np.frombuffer(img, np.uint8), 1)
             if len(BluredImg.shape) < 3 or BluredImg.shape[2] == 1:
                 BluredImg = cv2.merge([BluredImg, BluredImg, BluredImg])
             img1 = (np.array(BluredImg, 'f')-127.5)/127.5
