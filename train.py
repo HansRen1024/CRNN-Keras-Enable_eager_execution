@@ -1,6 +1,6 @@
 import os, time, json
 import tensorflow as tf
-from CRNN.model import Constants, crnn, train_on_batch, validate_on_batch
+from model import Constants, crnn, train_on_batch, validate_on_batch
 
 tf.compat.v1.enable_eager_execution()
 
